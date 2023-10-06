@@ -11,7 +11,8 @@ a {
     margin: 5px;
     text-align: center;
 }
-a:hover{ 
+a:hover{
+    color: burlywood
 }
 nav {
     display: flex;
