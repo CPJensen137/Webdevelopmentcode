@@ -12,7 +12,7 @@ a {
     text-align: center;
 }
 a:hover{
-    color: burlywood
+    color: white
 }
 nav {
     display: flex;
