@@ -76,6 +76,7 @@ nav a {
     margin: 0 10px;
 }
 
+
 #hero {
     display: flex;
     justify-content: center; /* Center content horizontally */
@@ -84,8 +85,15 @@ nav a {
 }
 
 #hero-box {
-    max-width: 800px; /* Adjust the max-width to your desired value */
+    max-width: 800px; 
     position: relative;
+    margin: 0 auto;
+}
+
+#hero-box section{
+    position: absolute;
+    top: 50%;
+    left: 39%;
 }
 
 #hero-img {
@@ -105,6 +113,10 @@ nav a {
 
 .button-box {
     text-align: center;
+    position: absolute;
+    top: 70%; /* Adjust the vertical position as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .book {
@@ -192,4 +204,67 @@ footer a:hover {
     width: 25px; 
     height: auto;
     margin: 0 10px; 
+}
+
+/* Gallery Styles */
+#Gallary-hero {
+    position: relative;
+}
+
+#Gallary-hero-box {
+    position: relative;
+}
+
+#Gallary-hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Add rounded corners to the image */
+}
+
+.Gallary-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1; /* Ensure the text is above the image */
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-box {
+    position: absolute;
+    top: 100%; /* Position below the image */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+
+.gallery-item:hover .info-box {
+    height: 100px; /* Adjust the height as needed */
 }
