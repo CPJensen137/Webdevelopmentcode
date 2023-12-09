@@ -46,12 +46,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: var(--accent1-color);
 }
 
 #content {
     max-width: 1200px;
     margin: 0 auto;
+    background-color: var(--secondary-color);
+    padding: 20px;
 }
 
 header {
@@ -68,38 +70,48 @@ header img.logo {
 
 nav {
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
+    max-height: 100%;
 }
 
 
 #hero {
-    display: flex;
+   
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     margin-top: 20px;
 }
 
+
 #hero-box {
     max-width: 800px; 
     position: relative;
     margin: 0 auto;
+
 }
 
 #hero-box section{
-    position: absolute;
-    top: 50%;
-    left: 39%;
+    text-align: center;
+    margin-top: -150px;
+    margin-bottom: 150px;
 }
 
 #hero-img {
-    width: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
     height: auto;
     border-radius: 8px; /* Optional: Add rounded corners to the image */
+    
 }
 
 .home-title {
@@ -136,15 +148,30 @@ nav a {
     align-items: center;
     margin-top: 20px;
 }
+.Intro-section{
+    grid-column: span 2;
+    display: flex;
+    background-color: var(--extra-color);
+    border-radius: 8px;
+    align-items: center;
 
-.Intro-image img {
+}
+
+.Intro-section img {
     width: 300px;
     height: auto;
     border-radius: 8px; /* Optional: Add rounded corners to the image */
+    
 }
 
 .about-section {
+    height: 100%;
     max-width: 600px;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .banner {
@@ -167,12 +194,17 @@ nav a {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
+
 }
 
 .review-block-head {
     grid-column: span 2; /* Span both columns */
     text-align: center;
     margin-bottom: 20px;
+    background-color: #C5CEFA;
+    border-color: #000;
+    border-width: 2px;
+    
 }
 
 .review-block {
@@ -191,13 +223,13 @@ footer {
 }
 
 footer a {
-    color: var(#943C34);
+    color: white;
     text-decoration: none;
     margin: 0 10px;
 }
 
 footer a:hover {
-    color: var(white);
+    color: #943C34;
 }
 
 
@@ -241,48 +273,50 @@ footer a:hover {
 .gallery-item {
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .gallery-item img {
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
 }
 
 .info-box {
     position: absolute;
-    top: 100%; 
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0;
+    width: 300px;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     text-align: center;
-    height: 0; /* Initially hidden */
     overflow: hidden;
-    transition: height 0.3s ease-in-out;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
 }
 
 .gallery-item:hover .info-box {
-    height: 100px; 
+    opacity: 1; 
 
-}
+} 
 .info-box p{
     z-index: 2;
 }
 /* request page */
 
 .form {
-    /* Center the form on the page */
     margin: 0 auto;
-    width: 400px;
-    /* Form outline */
+    width: 500px;
     padding: 1em;
     border: 1px solid #ccc;
     border-radius: 1em;
+    
   }
   
   ul {
@@ -296,7 +330,7 @@ footer a:hover {
   }
   
   label {
-    /* Uniform size & alignment */
+    
     display: inline-block;
     width: 90px;
     text-align: right;
@@ -332,7 +366,9 @@ footer a:hover {
   
   .button {
     /* Align buttons with the text fields */
-    padding-left: 90px; /* same size as the label elements */
+     /* same size as the label elements */
+    display: flex;
+    justify-content: center;
   }
   
   button {
