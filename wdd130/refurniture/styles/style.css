@@ -148,6 +148,10 @@ nav a {
     align-items: center;
     margin-top: 20px;
 }
+.hero-section p{
+    font-size: 25px;
+    color: white;
+}
 .Intro-section{
     grid-column: span 2;
     display: flex;
@@ -228,8 +232,9 @@ footer a {
     margin: 0 10px;
 }
 
-footer a:hover {
+footer a:hover,nav a:hover {
     color: #943C34;
+
 }
 
 
@@ -317,6 +322,9 @@ footer a:hover {
     border: 1px solid #ccc;
     border-radius: 1em;
     
+  }
+  .form h1{
+    text-align: center;
   }
   
   ul {
